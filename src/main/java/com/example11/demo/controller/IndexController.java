@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 允许这个类去接受前端的请求
  */
 @Controller
-public class HelloController {
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name") String name, Model model){
-        model.addAttribute("name",name);
-        return "hello";//自动去找hello这个模板
+public class IndexController {
+    @GetMapping("/")
+    public String index(){
+        return "index";//自动去找hello这个模板
     }
 }
